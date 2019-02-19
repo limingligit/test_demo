@@ -1,0 +1,48 @@
+<%inherit file="/base.html"/>
+
+<%block name="content">
+<div class="king-layout2-main mt15" style="width:960px;">
+    <div class="ui-ui" style="position: relative; z-index: 0;">
+        <div class="form-horizontal">
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">选择服务器：</label>
+                <div class="col-sm-8">
+                    <button onclick="select_server()" class="king-btn-demo king-btn king-primary">选择服务器</button>
+                </div>
+                <div style="padding-left: 5%;" id="server_p" class="display_none">
+                    <div class="col-sm-10" style="padding-left:125px;padding-right: 128px;overflow-y: auto;width: 94%;">
+                        <div id="server_list" class="demo"
+                             style="margin-top: 5px;border-radius: 0;overflow-y: auto;overflow-x: hidden;margin-bottom: 0 !important;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-ui" style="position: relative; z-index: 0; opacity: 1;">
+                <div class="form-group clearfix">
+                    <label class="col-sm-3 control-label">密码输入：</label>
+                    <div class="col-sm-8">
+                        <input type="password" class="form-control" id="password_1" placeholder="请输入密码">
+                    </div>
+                </div>
+            </div>
+            <div class="ui-ui" style="position: relative; z-index: 0; opacity: 1;">
+                <div class="form-group clearfix">
+                    <label class="col-sm-3 control-label">密码确认：</label>
+                    <div class="col-sm-8">
+                        <input type="password" class="form-control" id="password" placeholder="请再次输入密码">
+                    </div>
+                </div>
+            </div>
+            <div class="ui-ui" style="position: relative; z-index: 0;">
+                <div class="form-group clearfix p30">
+                    <div class="col-sm-7 col-sm-offset-3">
+                        <button  onclick="confirm()" type="button" class="king-btn king-success mr10 navbar-blue">提交</button>
+                        <button onclick="cancel()" class="king-btn king-default">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</%block>
+<script type="text/javascript" src="${STATIC_URL}js/home_application/change_pass.js"></script>
